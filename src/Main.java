@@ -8,7 +8,7 @@ public class Main {
         task4();
     }
 
-    public static void task1() {
+    private static void task1() {
         int[] array = new int[3];
         array[0] = 1;
         array[1] = 2;
@@ -31,7 +31,7 @@ public class Main {
         }
     }
 
-    public static void task2() {
+    private static void task2() {
         double[] array = {1.57, 7.654, 9.986};
         System.out.print(" Элементы 2 го массива по порядку ");
         for (int i = 0; i < array.length; i++) {
@@ -51,7 +51,7 @@ public class Main {
         }
     }
 
-    public static void task3() {
+    private static void task3() {
         int[] daysInWeek = new int[7];
         System.out.print(" Элементы 3 го массива по порядку ");
         daysInWeek[0] = 1;
@@ -78,24 +78,31 @@ public class Main {
 
         }
     }
-    public static void task4() {
-        //Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными (нужно прибавить 1).
+
+    private static void task4() {
         int[] array = new int[3];
         array[0] = 1;
         array[1] = 2;
         array[2] = 3;
-        System.out.print(" ");
+        System.out.println(" ");
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 1) {
                 array[i] = array[i] + 1;
-                System.out.print(array[i]);
-                if (i < array.length - 1) {
-                    System.out.print(", ");}
-            } else if (array[i] % 2 == 0) {
-                System.out.print(array[i]);
-                if (i < array.length - 1) {
-                    System.out.print(", ");}
-            }
+            }   if (i != 0) {
+                System.out.print(", ");
+               System.out.print(array[i]);
+            } else {
+                System.out.print(" ");
+              System.out.print(array[i]);
+              // Почему в данном случае запятые расставляются верно , если я их указываю вначале?
+                // Вообще так правильнее? Спасибо, заранее за обратную связь.
         }
-    }
-}
+
+            }
+
+                }
+            }
+
+
+
+
